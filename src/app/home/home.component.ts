@@ -1,4 +1,8 @@
+import { ThisReceiver } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
+import { RepoClass } from '../repo-class';
+import { GitHttpService } from '../git-http.service';
+
 
 @Component({
   selector: 'app-home',
@@ -6,32 +10,33 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  ngOnInit(): void {
+    throw new Error('Method not implemented.');
+  }
   title = 'Git_App';
-  imageSrc = 'assets/joker.jpeg'
-  imageAlt = 'The Joker'
+  onsubmission=("")
+
   results!: any
   p = '*click button again to confirm search*'
 
-  constructor(private git: GithubRequestService) { }
+  constructor(private git: GitHttpService) { }
 
-  ngOnInit(): void {
-  }
 
 }
 
-repo!: Repos
+RepoClass!= RepoClass
 
-doSearch(term: string) {
-  this.git.search(term);
-  this.results = this.git.results
-  this.git.search(`${term}/repos`)
-  this.repo = this.git.repos
-  console.log(this.results)
-}
-onSubmission() { }
+// doSearch(term: string) {
+//   ThisReceiver.git.search(term);
+//   ThisReceiver.results = this.git.results
+//   ThisReceiver.git.search(`${term}/repos`)
+//   ThisReceiver.repo = this.git.repos
+//   console.log(this.results)
+// }
+// onSubmission() { }
 
 
-ngOnInit(): void {
-  this.repo = new Repos(0)
-}
+// ngOnInit(): void {
+//   this.repo = new RepoClass(0)
+
 
