@@ -1,1 +1,66 @@
-<p>home works!</p>
+<!-- <p>home works!</p> -->
+<div class="container">
+    <h1>{{title}}</h1>
+    <h2>Search GitHub</h2>
+    <hr class="my-4">
+
+  <div class="one">
+    <img src="{{imageSrc}}" alt="{{imageAlt}}" width="30%">
+    <div class="row">
+      <div class="col-md-4">
+        <p>Hello and welcome to my GitHub search app</p>
+        <p>For some introduction,</p>
+        <p>I am a programming student who</p>
+        <p>goes by the username Nelson014 on Github.</p>
+        <p>Below are a few projects I have worked on:</p>
+      </div>
+    </div>
+  </div>
+  <div class="repos">
+    <p>*Click on an item to view the repository on GitHub*</p>
+    <ol>
+      <li><a href="https://github.com/Nelson014/Git_App.git">Git_App</a></li>
+      <p>A site to search for github users and their public repositories</p><br>
+      <li><a href="https://github.com/Nelson014/Quote-and-Quote.git">Quote-and-Quote</a></li>
+      <p>A place to view/submit quotes from various authors and also vote them according to preference</p><br>
+      <li><a href="https://github.com/Nelson014/Iz_Us-Pizzas.git">Iz_Us_Pizzas</a></li>
+      <p>Pick preferred pizza ingredients, get the total cost, place an order and have it delivered to you</p><br>
+      <li><a href="https://github.com/Nelson014/Dela-Me_Studio.git">Dela-Me_Studio</a></li>
+      <p>A website building platform</p><br>
+      <li><a href="https://github.com/Nelson014/Akan_Name_4U.git">Akan_Name_4U</a></li>
+      <p>Get a Ghanaian name generated for you based on your birth date</p><br>
+      <li><a href="https://github.com/Nelson014/Street_Food_Replica.git">Street_Food_Replica</a></li>
+      <p>A copy of the street food website for UI practise</p>
+    </ol>
+  </div>
+
+  <div class="form" id="form">
+    <h2>Search Github</h2>
+    <form autocomplete="off" class="form-inline"  #searchForm="ngForm" (ngSubmit)="onSubmission()">
+      <div class="form-group">
+        <input ngModel type="search" class="form-control" id="in" placeholder="Enter github username" #search="ngModel" name="name" required>
+      </div>
+      <button type="submit" class="btn btn-primary" (click)="doSearch(search.value)">
+        Search
+      </button>
+      <p id="show">{{p}} </p>
+    </form>
+    <div *ngIf="results">
+      <ul *ngFor="let result of results">
+        <li>{{result.name}}</li>
+      </ul>
+    </div>
+  </div>
+
+  <footer class="text-center">
+    <h2>Contacts</h2>
+    <div class="foot">
+      <a href="mailto:nelson.odhiambo@student.moringaschool.com">nelson.odhiambo@student.moringaschool.com</a>
+      <br>
+      <a href="tel:+254-794-023-020">+254-794-023-020</a>
+      <br>
+      <a href="https://github.com/Nelson014?tab=repositories">Github</a>
+    </div>
+  </footer>
+
+</div>
