@@ -25,12 +25,12 @@ export class AppComponent {
     this.git.search(term);
     this.results = this.git.results
     this.git.search(`${term}/repos`)
-    this.repo = this.git.repos
+    this.repo = this.git.repoClass
     console.log(this.results)
   }
   onSubmission() { }
 
   ngOnInit(): void {
-    this.repo = new RepoClass(0)
+    this.repo = new RepoClass("")
   }
 }

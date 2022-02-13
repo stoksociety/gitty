@@ -1,4 +1,3 @@
-import { ThisReceiver } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { RepoClass } from '../repo-class';
 import { GitHttpService } from '../git-http.service';
@@ -13,11 +12,11 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     throw new Error('Method not implemented.');
   }
-  title = 'Git_App';
-  onsubmission=("")
+  title = ' The_Git_App';
+  onsubmission=('')
 
   results!: any
-  p = '*click button again to confirm search*'
+  p = '*please wait as we work to show you you!*'
 
   constructor(private git: GitHttpService) { }
 
@@ -26,17 +25,19 @@ export class HomeComponent implements OnInit {
 
 RepoClass!= RepoClass
 
-// doSearch(term: string) {
-//   ThisReceiver.git.search(term);
-//   ThisReceiver.results = this.git.results
-//   ThisReceiver.git.search(`${term}/repos`)
-//   ThisReceiver.repo = this.git.repos
-//   console.log(this.results)
+// doSearch(term string) {
+//   This.git.search(term);
+//   This.results = this.git.results
+//   This.git.search(`${'term'}/repos`)
+//   This.repo = this.git.repos
+//   consoole.log(this.results)
 // }
 // onSubmission() { }
 
 
 // ngOnInit(): void {
-//   this.repo = new RepoClass(0)
+//   RepoClass! = new RepoClass(0)
+
+// }
 
 
