@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { RepoClass } from '../repo-class';
 import { GitHttpService } from '../git-http.service';
 
-
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
