@@ -13,10 +13,9 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     throw new Error('Method not implemented.');
   }
-  
+
   title = ' The_Git_App';
   onsubmission=("")
-
   results!: any
   p = '*please wait as we work to show you you!*'
 
