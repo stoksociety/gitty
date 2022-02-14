@@ -11,7 +11,7 @@ h2 {
 }
 
 h2:hover {
-  color: aqua;
+  color: rgb(0, 255, 98);
   font-size: 150%;
 }
 

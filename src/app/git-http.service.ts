@@ -6,16 +6,18 @@ import { HttpClient } from '@angular/common/http';
 })
 export class GitHttpService {
    apiRoot: string = 'https://api.github.com/users'
+   apikey: string = ''
    results: any;
    repoClass: any;
    result2!: string;
    loading!: boolean;
+   result: string;
 
    constructor(private httpClient: HttpClient) {
 
      this.results = [];
      this.repoClass = [];
-     this.result2 = '';
+     this.result = '';
      this.loading = false;
    }
 
