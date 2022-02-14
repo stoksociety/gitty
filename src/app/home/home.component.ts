@@ -23,7 +23,7 @@ export class HomeComponent implements OnInit {
 
 }
 
-RepoClass!= RepoClass
+RepoClass!=  RepoClass
 
 // doSearch(term string) {
 //   This.git.search(term);
